@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/aleksey-kaa/react-shop",
+  "homepage": "https://github.com/aleksey-kaa/react-shop/",
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
