@@ -26,12 +26,11 @@ const ShopItemInfo = (props) => {
             return
         }
     }, [idItem])
-    const { id, category, title, price } = item
-
+    const { category, title, price, image } = item
     return (
         <div className='info-item__wrap'>
             <div className='info-img'>
-                <img src={`/assets/img/${category}/${id}.webp`} alt={''} />
+                <img src={image} alt={category} />
             </div>
             <div className='info-item'>
                 <h4 className='item-title'>{title}</h4>

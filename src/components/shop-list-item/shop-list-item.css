@@ -42,6 +42,7 @@
   font-size: 20px;
   cursor: pointer;
   transition: background 200ms;
+  outline: none;
 }
 .item-button.item-in-cart {
   background: #27ae60;

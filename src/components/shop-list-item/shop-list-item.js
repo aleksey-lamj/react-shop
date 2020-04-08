@@ -34,13 +34,13 @@ export const ButtonInCart = ({ cart, id, addToCart, allRemoveToCart }) => {
         </button>
     )
 }
-const ShopListItem = ({ id, title, category, price, addToCart, allRemoveToCart, cart, showInfo }) => {
+const ShopListItem = ({ id, title, category, price, image, addToCart, allRemoveToCart, cart, showInfo }) => {
 
     return (
         <div className="shop-item">
 
             <div className="img-wrap" onClick={() => showInfo(category, id)}>
-                <img src={`./assets/img/${category}/${id}.webp`} alt={category} />
+                <img src={image} alt={category} />
             </div>
 
             <h4 className="item-title">{title}</h4>

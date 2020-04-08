@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const PATHS = {
@@ -16,6 +15,7 @@ module.exports = {
     entry: ["@babel/polyfill", `${PATHS.src}/index.js`],
 
 
+    
     output: {
         filename: `[name].js`,
         path: path.resolve(__dirname, './dist/'),
@@ -29,10 +29,7 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: `[name].css`
-        }),
-        new CopyWebpackPlugin([
-            { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` }
-        ]),
+        })
         new HtmlWebpackPlugin({
             hash: false,
             template: `${PATHS.src}/index.html`,
@@ -51,8 +48,8 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: { sourceMap: true }
-                    },
-                    {
+                    }, 
+            {
                         loader: 'postcss-loader',
                         options: { sourceMap: true, config: { path: `./postcss.config.js` } }
                     },
@@ -117,8 +114,6 @@ module.exports = {
                     }
                 }
             }
-
         ]
     },
-
 }
