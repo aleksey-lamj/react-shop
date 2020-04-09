@@ -20,7 +20,7 @@ const App = () => {
             <div className="container">
                 <Header />
                 <Switch>
-                    <Route exact path='/' component={AllItem} />
+                    <Route exact path={["/", "/react-shop/"]} component={AllItem} />
                     <Route exact path="/boots" component={AllBoots} />
                     <Route exact path="/clothing" component={AllClothing} />
                     <Route exact path="/accessories" component={AllAccessories} />
